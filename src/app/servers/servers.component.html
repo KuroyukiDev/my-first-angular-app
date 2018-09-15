@@ -3,6 +3,9 @@
 <button class="btn btn-primary input-lg" (click)="onCreateServer()" [disabled]="!allowNewServer"><span class="glyphicon glyphicon-plus"></span> Add Server</button>
 
 <br><br>
-<h4>{{ serverName }}</h4>
+<h4 *ngIf="serverCreated">Server created successfully! The new server's name: {{ serverName }}</h4>
 
-<!--<app-server></app-server>-->
+
+
+
+<app-server *ngFor="let server of servers"></app-server>
